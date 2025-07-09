@@ -1,11 +1,22 @@
 {
   "name": "owasp-tests",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Cibli application tests",
   "scripts": {
-    "test": "cypress"
+    "cy:open": "npx cypress open",
+    "cy:run": "npx cypress run --browser chrome"
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "devDependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "clipboardy": "^4.0.0",
+    "cypress": "^14.5.1",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-mochawesome-reporter": "^3.8.2"
+  },
+  "dependencies": {
+    "uuid": "^10.0.0",
+    "x2js": "^3.4.4"
+  }
 }

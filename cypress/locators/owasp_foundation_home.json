@@ -1,0 +1,8 @@
+{
+  "login_button": ".signin",
+  "signup_link": ":nth-child(5) > .sign-up-link",
+  "login_email_input": "input[placeholder=\"Email Address *\"]",
+  "login_password_input": "input[placeholder=\"Password *\"]",
+  "login_submit_button": "button[data-id=\"submit\"]",
+  "welcome_message_label": "#modalContent h1"
+}

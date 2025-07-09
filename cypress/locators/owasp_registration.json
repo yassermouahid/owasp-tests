@@ -1,0 +1,8 @@
+{
+  "registration_email_input": "input[placeholder=\"Email Address\"]",
+  "registration_policy_checkbox": "input[type=\"checkbox\"]",
+  "registration_submit_button": "button[data-id=\"submit\"]",
+  "registration_firstname_input": "input[placeholder=\"First Name\"]",
+  "registration_lastname_input": "input[placeholder=\"Last Name\"]",
+  "registration_password_input": "input[placeholder=\"Password\"]"
+}
