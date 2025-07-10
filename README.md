@@ -15,7 +15,13 @@ Automated testing suite for OWASP website using Cypress.
 npm install
 ```
 
-2. Run tests:
+2. Get test credentials:
+
+   - Get test credentials from attached email link, save it and share it with reviewers (for security reasons).
+   - Copy email and password
+   - Paste them in `cypress.env.json` file
+
+3. Run tests:
 
 On headed mode:
 

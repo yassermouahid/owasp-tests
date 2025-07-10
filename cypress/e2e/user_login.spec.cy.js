@@ -2,13 +2,9 @@ const owasp_home_page_locators = require('../locators/owasp_home.json')
 const owasp_foundation_home_page_locators = require('../locators/owasp_foundation_home.json')
 
 describe('User Login', () => {
-  let input_data
   let expected_data
 
   before(() => {
-    cy.fixture('login_input_data').then((data) => {
-      input_data = data
-    })
     cy.fixture('login_expected_data').then((data) => {
       expected_data = data
     })
@@ -23,23 +19,20 @@ describe('User Login', () => {
       {
         args: {
           owasp_foundation_locators: owasp_foundation_home_page_locators,
-          input_data,
           expected_data,
         },
       },
-      ({ owasp_foundation_locators, input_data, expected_data }) => {
+      ({ owasp_foundation_locators, expected_data }) => {
+        const email = Cypress.env('email')
+        const password = Cypress.env('password')
         cy.on('uncaught:exception', () => false)
         cy.get(owasp_foundation_locators.login_button).click()
         cy.task('log', 'Clicked login button')
 
-        cy.get(owasp_foundation_locators.login_email_input).type(
-          input_data.email,
-        )
+        cy.get(owasp_foundation_locators.login_email_input).type(email)
         cy.task('log', 'Insterted email')
 
-        cy.get(owasp_foundation_locators.login_password_input).type(
-          input_data.password,
-        )
+        cy.get(owasp_foundation_locators.login_password_input).type(password)
         cy.task('log', 'Inserted password')
 
         cy.get(owasp_foundation_locators.login_submit_button).click()
